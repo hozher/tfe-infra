@@ -5,6 +5,10 @@ provider "aws" {
   }
 }
 
+data "aws_secretsmanager_secret" "tfe_license" {
+  name = "tfe_license_value"
+}
+
 module "tfe_node" {
   source               = "./terraform/aws-tfe"
   friendly_name_prefix = var.friendly_name_prefix
