@@ -5,7 +5,7 @@ provider "aws" {
   }
 }
 
-data "aws_secretsmanager_secret" "tfe_license" {
+data "aws_secretsmanager" "tfe_license" {
   name = "tfe_license_value"
 }
 
