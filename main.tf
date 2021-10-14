@@ -9,6 +9,6 @@ module "tfe_node" {
   source               = "./terraform/aws-tfe"
   friendly_name_prefix = var.friendly_name_prefix
   domain_name          = var.domain_name
-  tfe_license_secret   = ""
+  tfe_license_secret   = "dummy.rli"
   acm_certificate_arn  = var.acm_certificate_arn
 }
