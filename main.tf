@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 module "tfe_node" {
-  source                 = "../terraform/aws-tfe"
+  source                 = "terraform/aws-tfe"
   friendly_name_prefix   = "tfe"
   domain_name            = "distrito18.com"
   tfe_license_secret     = data.aws_secretsmanager.tfe_license
